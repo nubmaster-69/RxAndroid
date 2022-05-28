@@ -15,6 +15,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -38,6 +42,11 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    /**
+     * Note := adapter-rxjava have same version as retrofit
+     * More details := https://github.com/square/retrofit/blob/master/CHANGELOG.md#version-290-2020-05-20
+     */
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
     implementation 'com.google.code.gson:gson:2.9.0'
 
     implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'

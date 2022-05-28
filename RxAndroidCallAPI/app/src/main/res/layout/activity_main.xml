@@ -4,15 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_get_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Get All"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/purple_200"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_type_non_fiction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:text="Non-fiction"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_200"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_type_fiction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fiction"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/teal_700"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/book_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
